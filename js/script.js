@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       },
       "move": {
         "enable": true,
-        "speed": 6, // Speed of particles
+        "speed": 4, // Speed of particles
         "direction": "none",
         "random": false,
         "straight": false,
@@ -91,7 +91,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         "bubble": {
           "distance": 100,
           "size": 10,
-          "duration": 1,
+          "duration": 0.8,
           "opacity": 8,
           "speed": 3
         },
