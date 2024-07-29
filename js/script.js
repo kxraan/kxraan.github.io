@@ -73,23 +73,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "repulse" // Interaction on hover
+          "mode": "grab" // Interaction on hover
         },
         "onclick": {
           "enable": true,
-          "mode": "push" // Interaction on click
+          "mode": "bubble" // Interaction on click
         },
         "resize": true
       },
       "modes": {
         "grab": {
-          "distance": 400,
+          "distance": 200,
           "line_linked": {
             "opacity": 1
           }
         },
         "bubble": {
-          "distance": 400,
+          "distance": 200,
           "size": 40,
           "duration": 2,
           "opacity": 8,
