@@ -83,7 +83,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       },
       "modes": {
         "grab": {
-          "distance": 100,
+          "distance": 200,
           "line_linked": {
             "opacity": 1
           }
