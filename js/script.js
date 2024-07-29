@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   particlesJS('particles-js', {
     "particles": {
       "number": {
-        "value": 200, // Number of particles
+        "value": 130, // Number of particles
         "density": {
           "enable": true,
           "value_area": 800 // Area where particles are distributed
@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       },
       "move": {
         "enable": true,
-        "speed": 6, // Speed of particles
+        "speed": 5, // Speed of particles
         "direction": "none",
         "random": false,
         "straight": false,
@@ -83,14 +83,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       },
       "modes": {
         "grab": {
-          "distance": 200,
+          "distance": 150,
           "line_linked": {
             "opacity": 1
           }
         },
         "bubble": {
           "distance": 100,
-          "size": 0.8,
+          "size": 1.5,
           "duration": 0.8,
           "opacity": 8,
           "speed": 3
