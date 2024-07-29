@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   particlesJS('particles-js', {
     "particles": {
       "number": {
-        "value": 150, // Number of particles
+        "value": 200, // Number of particles
         "density": {
           "enable": true,
           "value_area": 800 // Area where particles are distributed
@@ -55,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       },
       "move": {
         "enable": true,
-        "speed": 5, // Speed of particles
+        "speed": 6, // Speed of particles
         "direction": "none",
         "random": false,
         "straight": false,
