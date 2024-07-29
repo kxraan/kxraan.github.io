@@ -83,15 +83,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       },
       "modes": {
         "grab": {
-          "distance": 200,
+          "distance": 100,
           "line_linked": {
             "opacity": 1
           }
         },
         "bubble": {
-          "distance": 200,
-          "size": 40,
-          "duration": 2,
+          "distance": 100,
+          "size": 10,
+          "duration": 1,
           "opacity": 8,
           "speed": 3
         },
