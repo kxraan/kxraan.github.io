@@ -90,7 +90,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         },
         "bubble": {
           "distance": 100,
-          "size": 1.5,
+          "size": 5,
           "duration": 0.8,
           "opacity": 8,
           "speed": 3
