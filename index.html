@@ -8,60 +8,6 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <title>My Space-Themed Portfolio</title>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      height: 100%;
-    }
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #000; /* Optional: add a background color */
-      z-index: -1; /* Behind other content */
-      top: 0;
-      left: 0;
-    }
-    header, main, footer {
-      position: relative;
-      z-index: 1; /* Above the particles background */
-    }
-    /* Additional styling to ensure main content is visible over particles */
-    header {
-      background: rgba(26, 26, 61, 0.8); /* Semi-transparent background */
-      padding: 10px 0;
-    }
-    header nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-    }
-    header nav ul li {
-      margin: 0 15px;
-    }
-    header nav ul li a {
-      color: #f0f0f0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      padding: 100px 20px; /* Adjust padding as needed */
-      color: #fff;
-      text-align: center;
-    }
-    main {
-      padding: 20px;
-    }
-    footer {
-      background: rgba(26, 26, 61, 0.8);
-      color: #f0f0f0;
-      text-align: center;
-      padding: 10px 0;
-    }
-  </style>
 </head>
 <body>
   <div id="particles-js"></div>
@@ -70,54 +16,46 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="home" class="hero">
-      <h1>Welcome to My Space-Themed Portfolio</h1>
+      <h1 class="typing-effect">Hey, I'm Karan!</h1>
       <p>Explore the universe of my projects and experiences.</p>
-    </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>A brief introduction about myself and my interests in computer science.</p>
-    </section>
+<div class="main-navigation">
+    <div class="nav-item-container">
+        <svg height="10" width="300" class="vector-line">
+            <line x1="0" y1="5" x2="300" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+          </svg>
+      <a href="#projects" class="nav-item">Projects</a>
+      
+      <svg height="10" width="30" class="vector-line">
+        <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+      </svg>
+      <a href="#experiences" class="nav-item">Experiences</a>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <!-- Project cards will go here -->
-      </div>
-    </section>
+      <svg height="10" width="300" class="vector-line">
+        <line x1="0" y1="5" x2="300" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+      </svg>
+    </div>
+  </div>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Details about my skills, experience, and education.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out to me through the form below.</p>
-      <form action="https://formspree.io/f/{your_form_id}" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
+  <!-- New Section for Social Links and Resume -->
+  <section class="additional-links">
+    <a href="https://github.com/kxraan" class="link-item"  target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/getkaran/" class="link-item"  target="_blank">LinkedIn</a>
+    <a href="resume.pdf" class="link-item"  target="_blank">Resume</a>
+  </section>
   </main>
-
-  <footer>
-    <p>© 2024 Your Name. All rights reserved.</p>
-  </footer>
-
   
+  <footer>
+    <p>© 2024 Karan. All rights reserved.</p>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

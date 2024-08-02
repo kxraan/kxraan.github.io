@@ -1,97 +1,163 @@
-body {
+body, html {
     font-family: 'Arial', sans-serif;
-    background-color: #0d0d2b; /* Dark blue background to represent space */
+    background-color: #000; /* Set background to pure black */
     color: #f0f0f0; /* Light text color */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100%;
+    overflow: hidden; /* Prevent any overflow causing extra scrollbars */
   }
   
-  header {
-    background: #1a1a3d; /* Darker blue for the header */
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  header nav ul li {
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    color: #f0f0f0;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero {
-    background: url('images/space-bg.jpg') no-repeat center center/cover; /* Background image */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  footer {
-    background: #1a1a3d;
-    color: #f0f0f0;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .project-card {
-    background: #1f1f3f;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
   #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #000; /* Black background */
-    z-index: 0; /* Behind other content */
     top: 0;
     left: 0;
-    pointer-events: auto;
+    z-index: 0; /* Behind other content */
+    pointer-events: none; /* Allow particles to interact */
   }
-
-  header, main, footer {
+  
+  .hero {
+    background: none; /* Ensure no background image or color */
+    padding: 100px 20px 0; /* Adjust bottom padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
     position: relative;
     z-index: 1;
-    pointer-events: none; /* Disable pointer events to allow particles to capture them */
+    min-height: 100vh; /* Ensure it covers full screen height */
+    overflow: hidden; /* Prevent overflow causing double scroll */
+    box-sizing: border-box; /* Include padding in element's total width and height */
   }
   
-  header a, main a, footer a, button {
-    pointer-events: auto; /* Re-enable pointer events for interactive elements */
+  .typing-effect {
+    font-size: 3em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #f0f0f0; /* Cursor */
+    animation: typing 4s steps(14), blink-caret 0.75s step-end infinite;
+    height: 1.2em; /* Fixed height to prevent shifting */
+    margin-bottom: 20px; /* Add space between text and dashboard */
   }
   
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 10em; } /* Adjust width to match the text length */
+  }
   
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #f0f0f0; }
+  }
+  
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 80%;
+    padding: 0; /* Remove padding for a cleaner look */
+    overflow: hidden; /* Ensure no overflow issues */
+  }
+  
+  .dashboard-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #333366; /* Darker color for better contrast */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .dashboard-item img {
+    max-width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-item p {
+    margin: 0;
+  }
+  
+  .dashboard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  header, footer {
+    display: none; /* Ensure header and footer are hidden */
+  }
+  
+  .hero, .dashboard-container {
+    position: relative;
+    z-index: 1; /* Ensure they are above particles-js */
+    pointer-events: auto; /* Allow interaction with elements */
+  }
+  
+  /* Main Navigation for Projects and Experiences */
+  .main-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .nav-item-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px;
+    padding: 5px 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-item:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  /* Additional Links for Social and Resume */
+  .additional-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .link-item {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  .link-item:hover {
+    color: #ff5733; /* Highlight color on hover */
+  }
+  
+  .vector-line {
+   
+    height: 2px;
+    background: #f0f0f0;
+    margin: 0 0px;
+    display: inline-block;
+  }
   
