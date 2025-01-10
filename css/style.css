@@ -381,7 +381,7 @@ body, html {
 /* Other styles in your style.css */
 /* Media Query for Mobile Devices */
 /* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .main-navigation {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to new rows */
