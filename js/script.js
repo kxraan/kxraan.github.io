@@ -111,7 +111,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 
   document.addEventListener('DOMContentLoaded', function() {
+
     const typingElement = document.querySelector('.typing-effect');
+    if(typingElement){
     const text = "Hey, I'm Karan!";
     let isTyping = false;
     
@@ -138,56 +140,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     setInterval(typeText, 12000); // Loop every 6 seconds
     typeText(); // Initial call
-  });
+  }
+
+  const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.projects-section');
+
+    function showSection(sectionId) {
+        // Hide all sections
+        sections.forEach(section => {
+            section.classList.add('hidden');
+        });
+
+        // Show the selected section
+        const sectionToShow = document.getElementById(sectionId);
+        if (sectionToShow) {
+            sectionToShow.classList.remove('hidden');
+        }
+
+        // Update active tab
+        tabs.forEach(tab => tab.classList.remove('active'));
+        const activeTab = document.querySelector(`#${sectionId}-tab`);
+        if (activeTab) {
+            activeTab.classList.add('active');
+        }
+    }
+
+    // Set default tab and section
+    showSection('swe-projects');
+
+    // Add click event listeners to tabs
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const sectionId = this.getAttribute('data-section');
+            showSection(sectionId);
+        });
+    });
+});
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const rocketWidget = document.getElementById('resume-download');
-    const rocketImage = rocketWidget.querySelector('.rocket-image');
-  
-    if (rocketWidget && rocketImage) {
-        console.log('Rocket widget and image found!');
-        rocketWidget.addEventListener('click', function() {
-          console.log('Rocket widget clicked!');
-          
-          // Temporarily set position to absolute for free movement
-          rocketImage.style.position = 'absolute';
-          rocketImage.style.top = rocketImage.offsetTop + 'px';
-          rocketImage.style.left = rocketImage.offsetLeft + 'px';
-    
-          // Animate rocket image to "fly" to the top-right corner
-          setTimeout(() => {
-            rocketImage.style.transform = 'translate(100vw, -100vh) scale(0.1)';
-          }, 0);
-        // Start download after animation
-        setTimeout(function() {
-          console.log('Initiating download...');
-          rocketImage.style.transform = 'none'; // Reset position (optional)
-        window.location.href = 'https://github.com/kxraan/kxraan.github.io/blob/main/Resume%20-%20Karan%20Agarwal.pdf'; // Replace with your resume file path
 
 
-      }, 1000); // Wait for the animation to complete
-    });
-}else{
-    console.log("Not found!");
-}
-  });
+
   
-  document.addEventListener('DOMContentLoaded', function() {
-    // Rocket animation (as above)
-    
-    // Navigation for other tabs
-    document.getElementById('projects').addEventListener('click', function() {
-      window.location.href = 'projects.html'; // Replace with actual link
-    });
   
-    document.getElementById('experiences').addEventListener('click', function() {
-      window.location.href = 'experience.html'; // Replace with actual link
-    });
   
-    document.getElementById('socials').addEventListener('click', function() {
-      window.location.href = 'socials.html'; // Replace with actual link
-    });
-  });
   
   

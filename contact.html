@@ -3,40 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CS student portfolio - Projects">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <title>Projects - My Space-Themed Portfolio</title>
+  <meta name="description" content="Karan's portfolio - Contact">
+  <link rel="stylesheet" href="css/style.css"> <!-- Base styles -->
+  <link rel="stylesheet" href="css/experience.css"> <!-- Shared styles with Experiences -->
+  <title>Contact - Karan Agarwal</title>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-<body>
-  <div id="particles-js"></div>
-  
+<body class="content-page">
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experiences.html">Experiences</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="main-navigation">
+      <div class="nav-item-container">
+        <a href="academics.html" class="nav-item">Academics</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="index.html" class="nav-item">Home</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="experience.html" class="nav-item">Experiences</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="contact.html" class="nav-item active">Contact</a>
+      </div>
+    </div>
   </header>
 
+  <div id="particles-js"></div>
+
   <main>
-    <section id="content" class="content-section">
-      <h1>Projects</h1>
-      <p>Content related to projects goes here...</p>
-      <!-- Add more content as needed -->
+    <section id="contact" class="content-section">
+      <h1>Contact Me</h1>
+      
+      <!-- Email Section -->
+      <div class="contact-item">
+        <p class="contact-text">Email: <a href="mailto:getkaran@terpmail.umd.edu" class="contact-link">getkaran [AT] terpmail [DOT] umd [DOT] edu</a></p>
+      </div>
+      
+      <!-- GitHub and LinkedIn Section -->
+      <div class="contact-row">
+        <div class="contact-item">
+          <p class="contact-text"><a href="https://github.com/kxraan" target="_blank" class="contact-link">GitHub</a></p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-text"><a href="https://www.linkedin.com/in/getkaran/" target="_blank" class="contact-link">LinkedIn</a></p>
+        </div>
+      </div>
+      
+      <!-- Resume Section -->
+      <div class="contact-item">
+        <a href="resume.pdf" target="_blank" class="resume-button">Download My Resume</a>
+      </div>
+      
     </section>
+    
   </main>
-  
+
   <footer>
     <p>© 2024 Karan. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js"></script> <!-- Add JavaScript file -->
 </body>
 </html>

@@ -3,36 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CS student portfolio - Projects">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <title>Projects - My Space-Themed Portfolio</title>
+  <meta name="description" content="Karan's portfolio - Experiences">
+  <link rel="stylesheet" href="css/style.css"> <!-- Base styles -->
+  <link rel="stylesheet" href="css/experience.css"> <!-- Experiences-specific styles -->
+  <title>Experiences - Karan Agarwal</title>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-<body>
-  <div id="particles-js"></div>
-  
+<body class="content-page">
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experiences.html">Experiences</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="main-navigation">
+      <div class="nav-item-container">
+        <a href="academics.html" class="nav-item">Academics</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="index.html" class="nav-item">Home</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+        <a href="experience.html" class="nav-item active">Experiences</a>
+        <svg height="10" width="30" class="vector-line">
+          <line x1="0" y1="5" x2="30" y2="5" style="stroke:#f0f0f0;stroke-width:2" />
+        </svg>
+       
+        <a href="contact.html" class="nav-item">Contact</a>
+      </div>
+    </div>
   </header>
+
+  <div id="particles-js"></div>
 
   <main>
     <section id="content" class="content-section">
-      <h1>Projects</h1>
-      <p>Content related to projects goes here...</p>
-      <!-- Add more content as needed -->
+      <h1>Experiences</h1>
+      <div class="experience-details">
+        <!-- Individual Experience Cards Will Go Here -->
+
+      <!-- Teaching Assistant -->
+      <div class="experience-card">
+        <h2>
+          <div class="flex-container">
+            <span class="left">Teaching Assistant</span>
+            <span class="right">January 2023 - Present</span>
+          </div>
+        </h2>
+        <div class="experience-location">
+          <span class="left"> Object Oriented Programming I && II - JAVA</span> 
+          <span class = "right"> College Park, Maryland</span>
+
+        </div>
+        <div class="experience-description">
+          <ul>
+            <li>Collaboratively managed and instructed a course for over 900 students, enhancing learning outcomes through proactive engagement.</li>
+            <li>Delivered targeted lab sessions and office hours, focusing on data structures and recursion, while efficiently debugging student code to improve software development skills.</li>
+            <li>Assisted students with designing, testing, and debugging medium-sized software systems using Java and graphical IDEs, emphasizing software engineering principles and APIs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience-divider"></div> <!-- Divider between experiences -->
+
+      <!-- LLM Testing Engineer -->
+      <div class="experience-card">
+        <h2>
+          <div class="flex-container">
+            <span class="left">LLM Testing Engineer</span>
+            <span class="right">July 2024 - August 2024</span>
+          </div>
+        </h2>
+
+        <div class="experience-location">
+          <span class="left"> Mercor AI Lab </span> 
+          <span class = "right"> Remote </span>
+
+        </div>
+
+        <div class="experience-description">
+          <ul>
+            <li><p>Designed complex coding prompts in  Designed complex coding prompts in <strong> Java</strong>, 
+              <strong>Python</strong>, 
+              <strong>Rust</strong>,
+              <strong>JavaScript</strong>,
+              <strong>C</strong>, and
+              <strong>OCaml</strong>
+              
+              to rigorously test the capabilities and limitations of LLMs.</p> </li>
+            <li>Provided optimal coding solutions to rectify model failures and improve accuracy.</li>
+            <li>Reviewed 7-8 team submissions daily, delivering critical feedback on prompt design, code quality, and model output to refine the model’s testing strategies.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience-divider"></div> <!-- Divider between experiences -->
+
+      <!-- Resident Advisor -->
+      <div class="experience-card">
+        <h2>
+          <div class="flex-container">
+            <span class="left">Resident Advisor</span>
+            <span class="right">January 2023 - December 2023</span>
+          </div>
+        </h2>
+        
+        <div class="experience-location">
+          <span class="left"> University of Maryland </span> 
+          <span class = "right"> College Park, Maryland</span>
+
+        </div>
+
+        <div class="experience-description">
+          <ul>
+            <li>Managed a residence hall floor with 50+ undergraduates, fostering a positive living environment through community-building initiatives.</li>
+            <li>Effectively resolved numerous resident conflicts and enhanced community engagement through monthly educational programs on diversity, wellness, and academic success.</li>
+          </ul>
+        </div>
+      </div>
+
+
+      </div>
     </section>
   </main>
-  
+
   <footer>
     <p>© 2024 Karan. All rights reserved.</p>
   </footer>

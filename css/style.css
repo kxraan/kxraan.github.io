@@ -1,14 +1,22 @@
 body, html {
     font-family: 'Arial', sans-serif;
-    background-color: #000; /* Set background to pure black */
+    background-color: #000005; /* Set background to pure black */
     color: #f0f0f0; /* Light text color */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
     height: 100%;
-    overflow: hidden; /* Prevent any overflow causing extra scrollbars */
+    overflow-y: hidden;
+  }
+
+  .home-page{
+    overflow: hidden;
   }
   
+  .content-page{
+    overflow-y: auto;
+  }
+
   #particles-js {
     position: absolute;
     width: 100%;
@@ -32,6 +40,20 @@ body, html {
     min-height: 100vh; /* Ensure it covers full screen height */
     overflow: hidden; /* Prevent overflow causing double scroll */
     box-sizing: border-box; /* Include padding in element's total width and height */
+  }
+
+  .hero h1 {
+    font-size: 3em;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.0em;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 80%;
   }
   
   .typing-effect {
@@ -91,11 +113,15 @@ body, html {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
-  header, footer {
+  header{
+    display: block;
+  }
+  
+  footer {
     display: none; /* Ensure header and footer are hidden */
   }
   
-  .hero, .dashboard-container {
+  .hero, .dashboard-container, .content-section {
     position: relative;
     z-index: 1; /* Ensure they are above particles-js */
     pointer-events: auto; /* Allow interaction with elements */
@@ -127,10 +153,19 @@ body, html {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
   }
+
   
   .nav-item:hover {
     background-color: #f0f0f0;
     color: #000;
+  }
+
+  .nav-item.active {
+    background-color: #1e90ff; /* Highlight background color */
+    color: #f0f0f0; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    /* Bold text */
+    padding: 5px 15px; /* Add padding for better appearance */
   }
   
   /* Additional Links for Social and Resume */
@@ -151,7 +186,7 @@ body, html {
   }
   
   .link-item:hover {
-    color: #ff5733; /* Highlight color on hover */
+    color:#1e90ff;/* Highlight color on hover */
   }
   
   .vector-line {
@@ -159,5 +194,97 @@ body, html {
     background: #f0f0f0;
     margin: 0 0px;
     display: inline-block;
+    stroke: url(#gradient-line);
+  }
+
+  .academic-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(4, 4, 10, 0.4);; /* Semi-transparent background */
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   }
   
+  .academic-details h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #1e90ff;
+    border-bottom: 2px solid #ffffff;
+   /* padding-bottom: 5px; */
+  }
+  
+  .academic-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .academic-details strong {
+    color: #1e90ff; /* Highlight important information */
+  }
+
+
+.content-section {
+  background:  linear-gradient(145deg, rgba(6, 0, 13, 0.4), rgba(13, 13, 40, 0.4) ); /* Dark Purple Background */
+  padding: 50px;
+  margin: 20px auto;
+  max-width: 800px; /* Optional: Control the width of the content */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  color: #f0f0f0; /* Ensure text color remains readable */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* White border with low opacity */
+}
+
+.content-section h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e90ff; /* White */
+}
+
+.content-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #1e90ff; /* Nebula Orange for emphasis */
+}
+
+.content-section p, ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.content-section span {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #ff5733; /* Highlighted text color */
+}
+
+  
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container .left {
+  text-align: left;
+  font-weight: bold;
+  color: #f0f0f0
+}
+
+.flex-container .right {
+  text-align: right;
+  font-weight: bold;
+  color: #f0f0f0
+}
+.section-divider {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+
