@@ -231,3 +231,48 @@
     font-size: 1.2em;
   }
   
+
+  /* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .experience-details {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .experience-card {
+    padding: 15px;
+  }
+
+  .experience-card h2 {
+    font-size: 1.2em;
+  }
+
+  .experience-description ul li {
+    font-size: 0.9em;
+  }
+
+  .tabs-container {
+    flex-direction: column; /* Stack tabs vertically */
+    gap: 10px;
+  }
+
+  .tab {
+    font-size: 0.9em; /* Smaller font for tabs */
+    padding: 8px 10px;
+  }
+
+  .contact-row {
+    flex-direction: column; /* Stack contact items vertically */
+    gap: 15px;
+  }
+
+  .resume-button {
+    padding: 10px 20px; /* Smaller button */
+    font-size: 1em;
+  }
+
+  .cta {
+    font-size: 1em;
+  }
+}
+

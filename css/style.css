@@ -287,4 +287,122 @@ body, html {
   margin: 20px 0;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .hero {
+    padding: 50px 15px; /* Reduce padding for smaller screens */
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2em; /* Smaller font size for headings */
+  }
+
+  .hero p {
+    font-size: 0.9em; /* Adjust font size */
+    line-height: 1.4;
+    max-width: 90%; /* Ensure it fits smaller screens */
+  }
+
+  .main-navigation {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: center;
+    margin-top: 20px; /* Add some space */
+    gap: 10px; /* Add spacing between items */
+  }
+
+  .nav-item-container {
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center;
+  }
+
+  .nav-item {
+    font-size: 1em; /* Slightly smaller font */
+    padding: 10px 15px; /* Adjust padding for better touch targets */
+    width: auto; /* Make width flexible */
+    border-radius: 5px; /* Maintain the rounded look */
+  }
+
+  .nav-item.active {
+    background-color: #1e90ff; /* Highlight the active tab */
+    color: #fff;
+  }
+
+  .vector-line {
+    display: none; /* Hide the lines between navigation items */
+  }
+
+  .additional-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .link-item {
+    font-size: 0.9em; /* Smaller font for links */
+  }
+
+  .content-section {
+    padding: 20px; /* Reduce padding */
+    margin: 15px auto;
+    max-width: 95%; /* Allow more space for content */
+  }
+
+  .content-section h1 {
+    font-size: 2em;
+  }
+
+  .content-section h2 {
+    font-size: 1.5em;
+  }
+
+  .academic-details {
+    padding: 15px;
+    font-size: 0.9em; /* Adjust font size */
+  }
+
+  .dashboard-container {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 items per row */
+    gap: 10px;
+  }
+
+  .dashboard-item {
+    padding: 10px;
+  }
+
+  .dashboard-item img {
+    max-width: 40px; /* Smaller images */
+  }
+}
+
+/* Other styles in your style.css */
+/* Media Query for Mobile Devices */
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .main-navigation {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to new rows */
+    justify-content: center; /* Center align items */
+    gap: 10px; /* Add spacing between items */
+    padding: 10px 0; /* Add padding for a cleaner look */
+  }
+
+  .nav-item {
+    font-size: 0.9em; /* Slightly smaller font size */
+    padding: 10px 15px; /* Adjust padding for better size */
+    width: 28%; /* Adjust width for three items per row */
+    min-width: 120px; /* Ensure buttons don't get too small */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    border-radius: 5px; /* Maintain rounded corners */
+  }
+
+  .vector-line {
+    display: none; /* Hide vector lines for mobile */
+  }
+}
+
 

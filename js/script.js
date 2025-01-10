@@ -175,6 +175,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             showSection(sectionId);
         });
     });
+
+
+    // Mobile Navigation Toggle
+ 
 });
 
 
