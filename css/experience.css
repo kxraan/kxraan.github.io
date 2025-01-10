@@ -233,7 +233,7 @@
   
 
   /* Media Query for Mobile Devices */
-@media (max-width: 1024px) {
+  @media (hover: none) and (pointer: coarse) {
   .experience-details {
     gap: 15px;
     padding: 10px;
